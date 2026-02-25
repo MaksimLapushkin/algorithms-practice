@@ -17,8 +17,18 @@ A small collection of classic algorithm problems implemented in Java with focus 
 - `algorithms.tree.TreeTraversals` - inorder (DFS) and level-order (BFS)
 
 ## How to run
-This project includes a simple `Main` class for manual checks.
-Run `Main` from your IDE to see example outputs.
+## Build
+
+mvn clean package
+
+## Run locally
+
+java -jar target/AlgorithmPractice-1.0-SNAPSHOT.jar
+
+## Run with Docker
+
+docker build -t algo-practice .
+docker run --rm algo-practice
 
 ## Notes
 Each solution aims to be:
