@@ -1,3 +1,5 @@
+package algorithms;
+
 import algorithms.hashmap.FirstUnique;
 import algorithms.slidingwindow.MinimumSizeSubarraySum;
 import algorithms.stack.MinStack;
