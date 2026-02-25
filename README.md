@@ -16,22 +16,21 @@ A small collection of classic algorithm problems implemented in Java with focus 
 - `algorithms.stack.MinStack` - stack with O(1) min retrieval
 - `algorithms.tree.TreeTraversals` - inorder (DFS) and level-order (BFS)
 
-## How to run
 ## Build
 
+```bash
 mvn clean package
+```
 
 ## Run locally
 
+```bash
 java -jar target/AlgorithmPractice-1.0-SNAPSHOT.jar
+```
 
 ## Run with Docker
 
+```bash
 docker build -t algo-practice .
 docker run --rm algo-practice
-
-## Notes
-Each solution aims to be:
-- Reusable (no hardcoded inputs inside methods)
-- Time/space complexity aware
-- Easy to read and explain in an interview
+```
