@@ -2,6 +2,7 @@ package algorithms;
 
 import algorithms.hashmap.FirstUnique;
 import algorithms.slidingwindow.MinimumSizeSubarraySum;
+import algorithms.slidingwindow.RateLimiter;
 import algorithms.stack.MinStack;
 import algorithms.twopointers.ThreeSum;
 import algorithms.trees.TreeNode;
@@ -18,6 +19,7 @@ public class Main {
         testThreeSum();
         testMinStack();
         testTreeTraversals();
+        testRateLimiter();
     }
 
     private static void testFirstUnique() {
@@ -75,6 +77,26 @@ public class Main {
 
         System.out.println("Level order:");
         System.out.println(traversals.levelOrder(root));
+
+        System.out.println();
+    }
+
+    private static void testRateLimiter() {
+        System.out.println("RateLimiter:");
+
+        RateLimiter limiter = new RateLimiter();
+
+        System.out.println(limiter.allowRequest("user1", 0));
+        System.out.println(limiter.allowRequest("user1", 1));
+        System.out.println(limiter.allowRequest("user1", 2));
+        System.out.println(limiter.allowRequest("user1", 3));
+
+        System.out.println(limiter.allowRequest("user1", 12));
+
+        System.out.println(limiter.allowRequest("user2", 1));
+        System.out.println(limiter.allowRequest("user2", 2));
+        System.out.println(limiter.allowRequest("user2", 3));
+        System.out.println(limiter.allowRequest("user2", 4));
 
         System.out.println();
     }
