@@ -7,6 +7,7 @@ import algorithms.stack.MinStack;
 import algorithms.twopointers.ThreeSum;
 import algorithms.trees.TreeNode;
 import algorithms.trees.TreeTraversals;
+import algorithms.hashmap.IsAnagram;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class Main {
         testMinStack();
         testTreeTraversals();
         testRateLimiter();
+        testIsAnagram();
     }
 
     private static void testFirstUnique() {
@@ -97,6 +99,19 @@ public class Main {
         System.out.println(limiter.allowRequest("user2", 2));
         System.out.println(limiter.allowRequest("user2", 3));
         System.out.println(limiter.allowRequest("user2", 4));
+
+        System.out.println();
+    }
+
+    private static void testIsAnagram() {
+        System.out.println("IsAnagram:");
+
+        IsAnagram ia = new IsAnagram();
+
+        System.out.println(ia.isAnagram("anagram", "nagaram"));
+        System.out.println(ia.isAnagram("rat", "car"));
+        System.out.println(ia.isAnagram("listen", "silent"));
+        System.out.println(ia.isAnagram("hello", "bello"));
 
         System.out.println();
     }
