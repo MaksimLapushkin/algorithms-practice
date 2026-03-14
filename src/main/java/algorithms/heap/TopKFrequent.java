@@ -21,6 +21,9 @@ public class TopKFrequent {
         }
         int []result = new int[k];
         for (int i = k-1; i >= 0; i--){
+            if (heap.isEmpty()){
+                return result;
+            }
             result[i]= heap.poll();
         }
         return result;
