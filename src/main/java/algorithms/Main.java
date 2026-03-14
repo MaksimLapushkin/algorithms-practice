@@ -1,6 +1,7 @@
 package algorithms;
 
 import algorithms.hashmap.FirstUnique;
+import algorithms.heap.TopKFrequent;
 import algorithms.slidingwindow.MinimumSizeSubarraySum;
 import algorithms.slidingwindow.RateLimiter;
 import algorithms.stack.MinStack;
@@ -9,6 +10,7 @@ import algorithms.trees.TreeNode;
 import algorithms.trees.TreeTraversals;
 import algorithms.hashmap.IsAnagram;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -22,6 +24,7 @@ public class Main {
         testTreeTraversals();
         testRateLimiter();
         testIsAnagram();
+        testTopKFrequent();
     }
 
     private static void testFirstUnique() {
@@ -114,5 +117,14 @@ public class Main {
         System.out.println(ia.isAnagram("hello", "bello"));
 
         System.out.println();
+    }
+    private static void testTopKFrequent() {
+        TopKFrequent t = new TopKFrequent();
+
+        System.out.println("TopKFrequent:");
+
+        int[] result = t.topKFrequent(new int[]{1,1,1,2,2,3}, 2);
+
+        System.out.println(Arrays.toString(result));
     }
 }
