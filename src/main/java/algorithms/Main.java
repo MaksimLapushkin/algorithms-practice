@@ -1,5 +1,6 @@
 package algorithms;
 
+import algorithms.binary_search.SearchInsertPosition;
 import algorithms.hashmap.FirstUnique;
 import algorithms.heap.TopKFrequent;
 import algorithms.slidingwindow.MinimumSizeSubarraySum;
@@ -25,6 +26,7 @@ public class Main {
         testRateLimiter();
         testIsAnagram();
         testTopKFrequent();
+        testSearchInsertPosition();
     }
 
     private static void testFirstUnique() {
@@ -126,5 +128,13 @@ public class Main {
         int[] result = t.topKFrequent(new int[]{1,1,1,2,2,3}, 2);
 
         System.out.println(Arrays.toString(result));
+    }
+
+    private static void testSearchInsertPosition(){
+        SearchInsertPosition s = new SearchInsertPosition();
+
+        System.out.println("SearchInsertPosition: ");
+        System.out.println(s.search(new int[]{1,3,5,6},5));
+        System.out.println(s.search(new int[]{1,3,5,6},2));
     }
 }
